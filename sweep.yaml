@@ -1,5 +1,10 @@
 method: random
-program: train.py
+program: main.py
+command:
+  - ${env}
+  - ${interpreter}
+  - ${program}
+  - ${args}
 parameters:
   learning_rate:
     min: 0.001
