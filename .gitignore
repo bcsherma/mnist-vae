@@ -1,2 +1,4 @@
 wandb/
 mnist_data/
+models/
+artifacts/
