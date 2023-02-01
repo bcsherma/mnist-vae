@@ -1,0 +1,14 @@
+method: random
+parameters:
+  learning_rate:
+    min: 0.001
+    max: 0.1
+    distribution: log_uniform
+  optimizer:
+    values: ['adam', 'sgd']
+  batch_size: 
+    values: [32, 64, 128, 256]
+  num_epochs:
+    min: 5
+    max: 15
+    distribution: int_uniform
