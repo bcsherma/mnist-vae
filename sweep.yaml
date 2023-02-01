@@ -1,4 +1,5 @@
 method: random
+program: train.py
 parameters:
   learning_rate:
     min: 0.001
