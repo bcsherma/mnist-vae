@@ -137,6 +137,12 @@ def train():
         path = f"models/model_ckpt_epoch={epoch}.pt"
         torch.save(vae.state_dict(), path)
 
+        artifact = wandb.Artifact(
+            "model", type="model", description="VAE model checkpoint"
+        )
+        artifact.add_file(path)
+        wandb.log_artifact(artifact)
+
         # Create sample predictions
         with torch.no_grad():
             sample = vae.decoder(z)
