@@ -82,14 +82,14 @@ def train():
 
     # Create dataloaders
     train_loader, test_loader = make_dataloaders(
-        batch_size=default_config["batch_size"]
+        batch_size=wandb.config.batch_size
     )
 
     # Create network
     vae = VAE(
         x_dim=784,
-        h_dim1=default_config["dim1"],
-        h_dim2=default_config["dim1"] // 2,
+        h_dim1=wandb.config.dim1,
+        h_dim2=wandb.config.dim1 // 2,
         z_dim=2,
     )
 
